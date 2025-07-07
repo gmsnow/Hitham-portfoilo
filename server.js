@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://hitham-portofolio.netlify.app/', // Replace with your real domain
+  origin: 'https://hitham-portofolio.netlify.app', // ✅ without trailing slash
   methods: ['POST'],
   allowedHeaders: ['Content-Type']
 }));
