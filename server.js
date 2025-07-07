@@ -4,7 +4,11 @@ const { Pool } = require('pg');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://hitham-portofolio.netlify.app/', // Replace with your real domain
+  methods: ['POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 
 // ✅ Only one pool using env var
